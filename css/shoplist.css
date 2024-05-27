@@ -1,0 +1,258 @@
+/* jost-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/jost-v15-latin-regular.woff2') format('woff2');
+}
+
+/* mulish-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/mulish-v13-latin-regular.woff2') format('woff2');
+}
+
+/* barlow-condensed-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/barlow-condensed-v12-latin-regular.woff2') format('woff2');
+}
+
+/* barlow-condensed-600 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/barlow-condensed-v12-latin-600.woff2') format('woff2');
+}
+
+/* barlow-condensed-800 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/barlow-condensed-v12-latin-800.woff2') format('woff2');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --theme: #101e5d;
+    --black: #212121;
+    --text-dark: #5a5959;
+    --dark: #5a5959;
+    --yellow: #ffb400;
+    --white: #fff;
+    --red: #f0151f;
+    --jost: 'jost';
+    --mulish: 'mulish';
+    --barlow: 'Barlow Condensed';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--black);
+}
+
+/* -------------------------------------------------Custom Css----------------------------------------------------- */
+
+.sub-banner {
+    background: url(../img/img-5.jpg);
+    background-size: cover;
+    height: 420px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.breadcrumb {
+    width: 300px;
+    text-align: center;
+}
+
+.area {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+}
+
+.breadcrumb-areas h1 {
+    font-weight: 600;
+    font-family: var(--barlow);
+    text-transform: uppercase;
+    font-size: 55px;
+    margin: 0;
+}
+
+.breadcrumbs li:hover a {
+    color: var(--yellow);
+}
+
+.breadcrumbs li a {
+    display: inline-block;
+    color: #f1efef;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.breadcrumbs li {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* ================================== Shop List Start================================== */
+
+.content-area {
+    padding: 100px 0 70px;
+}
+
+.shop-head h4 {
+    font-family: var(--barlow);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.shop-head p {
+    font-size: 16px;
+    line-height: 25px;
+    color: #5a5959;
+    margin-top: 0;
+}
+
+
+.shop-items {
+    margin-bottom: 30px;
+    border: none;
+    background: #fff;
+    z-index: 2;
+    position: relative;
+    transition: .5s;
+    overflow: hidden;
+    transition: 0.6s cubic-bezier(0.24, 0.74, 0.58, 1);
+    border-radius: 0;
+    text-align: center;
+}
+
+.shop-items .shop-pic {
+    position: relative;
+}
+
+.shop-items .shop-pic::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s ease;
+    background: #ffb400;
+}
+
+.shop-items .shop-pic::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s ease;
+}
+
+.shop-items:hover .shop-pic::after,
+.shop-items:hover .shop-pic::before {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    visibility: visible;
+    background: rgb(12 62 185 / 51%);
+}
+
+.shop-items:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    transition: 0.6s ease;
+}
+
+.price-box{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    text-align: right;
+    z-index: 10;
+    font-family: var(--mulish);
+}
+
+.price-box .del{
+    color: #f0151f;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.price-box span{
+    color: #37404d;
+    font-weight: 500;
+}
+
+.shop-items .shop-det{
+    padding: 25px 15px 30px;
+}
+
+.shop-items h5{
+    font-family: var(--barlow);
+    font-weight: 600;
+    letter-spacing: 1.5;
+    margin-bottom: 15px;
+}
+
+.shop-det .cart-btn{
+    padding: 7px 20px 7px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-radius: 3px;
+}
+
+.shop-det .btn-border{
+    color: #fff;
+    background: var(--yellow);
+    border: solid 1px var(--yellow);
+}
+
+/* ================================== Shop List End================================== */

@@ -1,0 +1,288 @@
+/* jost-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/jost-v15-latin-regular.woff2') format('woff2');
+}
+
+/* mulish-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/mulish-v13-latin-regular.woff2') format('woff2');
+}
+
+/* barlow-condensed-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/barlow-condensed-v12-latin-regular.woff2') format('woff2');
+}
+
+/* barlow-condensed-600 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/barlow-condensed-v12-latin-600.woff2') format('woff2');
+}
+
+/* barlow-condensed-800 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/barlow-condensed-v12-latin-800.woff2') format('woff2');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --theme: #101e5d;
+    --black: #212121;
+    --text-dark: #5a5959;
+    --dark: #5a5959;
+    --yellow: #ffb400;
+    --white: #fff;
+    --red: #f0151f;
+    --jost: 'jost';
+    --mulish: 'mulish';
+    --barlow: 'Barlow Condensed';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--black);
+}
+
+/* -------------------------------------------------Custom Css----------------------------------------------------- */
+
+/* ================================== Pricing Start================================== */
+.sub-banner {
+    background: url(../img/img-5.jpg);
+    background-size: cover;
+    height: 420px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.breadcrumb {
+    width: 300px;
+    text-align: center;
+}
+
+.area {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+}
+
+.breadcrumb-areas h1 {
+    font-weight: 600;
+    font-family: var(--barlow);
+    text-transform: uppercase;
+    font-size: 55px;
+    margin: 0;
+}
+
+.breadcrumbs li:hover a {
+    color: var(--yellow);
+}
+
+.breadcrumbs li a {
+    display: inline-block;
+    color: #f1efef;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* ================================== Pricing End================================== */
+
+.breadcrumbs li {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.main-text {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.main-text h1 {
+    font-family: var(--barlow);
+    color: black;
+    font-size: 33px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.main-text p {
+    font-size: 18px;
+    margin-bottom: 0;
+    font-weight: 400;
+    color: var(--dark);
+}
+
+.pricing-main {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 9;
+    background: #ffffff;
+    transition: .9s;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 9px;
+    padding: 40px 22px 0;
+    border-width: 1px;
+}
+
+.pricing-main::before {
+    content: "";
+    position: absolute;
+    background-color: var(--yellow);
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .9s;
+    border-radius: 9px;
+}
+
+.pricing-main:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-9px);
+}
+
+.pricing-main:hover::before {
+    width: 100%;
+}
+
+
+.pricing-main .pricing-head h5 {
+    font-weight: 500;
+    font-size: 20px;
+    font-family: var(--barlow);
+    color: var(--black);
+}
+
+.pricing-head p {
+    font-size: 16px;
+    line-height: 25px;
+    color: #5a5959;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.pricing-main .plan-price .prc {
+    font-size: 60px;
+    font-weight: 600;
+    position: initial;
+    text-align: center;
+    padding: 0;
+    color: #ffb400;
+    width: 100%;
+}
+
+sup {
+    font-size: 24px;
+    position: relative;
+    top: -30px;
+    color: #5a5959;
+    font-weight: 500;
+    vertical-align: baseline
+}
+
+.plan-price span {
+    font-size: 16px;
+    color: #5a5959;
+    font-weight: 500;
+}
+
+.pricing-main .plan-list {
+    border-width: 0 1px 1px;
+    padding: 20px 0 40px;
+}
+
+.pricing-main .plan-list ul {
+    display: table;
+    margin: 0 auto;
+    padding: 0 40px;
+    color: #5a5959;
+    text-align: left;
+}
+
+.pricing-main .plan-list ul li {
+    list-style: none;
+    border-bottom: 1px dashed #eaeceb;
+    line-height: 42px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.pricing-main .plan-list ul li i {
+    margin-right: 12px;
+    color: var(--yellow);
+}
+
+.pricing-main .plan-btn {
+    padding-top: 20px;
+}
+
+.pricing-main .pricing-btn {
+    font-size: 15px;
+    border-radius: 3px;
+    font-weight: 500;
+    padding: 7px 30px 8px;
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
+}
+
+.pricing-main:hover .plan-head h5,
+.pricing-main:hover .plan-price sup,
+.pricing-main:hover .plan-price,
+.pricing-main:hover .plan-head p,
+.pricing-main:hover .plan-price span,
+.pricing-main:hover .plan-list ul,
+.pricing-main:hover .plan-list ul li i {
+    color: #fff !important;
+    transform: 0.6s;
+}
+
+.pricing-main:hover .pricing-btn {
+    background-color: #fff;
+    border: solid 1px #fff;
+    color: var(--yellow);
+}

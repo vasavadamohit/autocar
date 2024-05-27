@@ -1,0 +1,323 @@
+/* jost-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/jost-v15-latin-regular.woff2') format('woff2');
+}
+
+/* mulish-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/mulish-v13-latin-regular.woff2') format('woff2');
+}
+
+/* barlow-condensed-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/barlow-condensed-v12-latin-regular.woff2') format('woff2');
+}
+
+/* barlow-condensed-600 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/barlow-condensed-v12-latin-600.woff2') format('woff2');
+}
+
+/* barlow-condensed-800 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/barlow-condensed-v12-latin-800.woff2') format('woff2');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --theme: #101e5d;
+    --black: #212121;
+    --text-dark: #5a5959;
+    --dark: #5a5959;
+    --yellow: #ffb400;
+    --white: #fff;
+    --red: #f0151f;
+    --jost: 'jost';
+    --mulish: 'mulish';
+    --barlow: 'Barlow Condensed';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--black);
+}
+
+/* -------------------------------------------------Custom Css----------------------------------------------------- */
+
+/* ================================== Pricing Start================================== */
+.sub-banner {
+    background: url(../img/img-5.jpg);
+    background-size: cover;
+    height: 420px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.breadcrumb {
+    width: 300px;
+    text-align: center;
+}
+
+.area {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+}
+
+.breadcrumb-areas h1 {
+    font-weight: 600;
+    font-family: var(--barlow);
+    text-transform: uppercase;
+    font-size: 55px;
+    margin: 0;
+}
+
+.breadcrumbs li:hover a {
+    color: var(--yellow);
+}
+
+.breadcrumbs li a {
+    display: inline-block;
+    color: #f1efef;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* ================================== Pricing End================================== */
+
+.breadcrumbs li {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.main-text {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.main-text h1 {
+    font-family: var(--barlow);
+    color: black;
+    font-size: 33px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.main-text p {
+    font-size: 18px;
+    margin-bottom: 0;
+    font-weight: 400;
+    color: var(--dark);
+}
+
+.contact-form h3, .contact-info h3{
+    font-family: var(--barlow);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+.contact-inner {
+    margin: 0 auto -100px;
+    background: #fff;
+    box-shadow: 0px 5px 15px 0px rgb(62 65 159 / 10%);
+    z-index: 111;
+    position: relative;
+}
+
+.contact-form {
+    padding: 70px;
+    border-right: solid 1px #e5e5e5;
+}
+
+.contact-form h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 0;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.contact-form .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-floting {
+    color: #5a5959;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-floting .form-control {
+    width: 100%;
+    padding: 16px;
+    border: 0;
+    background-color: #f5f5f5;
+    border-radius: 1px solid #f5f5f5;
+    border-radius: 4px;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+
+.contact-form textarea {
+    min-height: 220px;
+}
+
+.send-btn {
+    position: relative;
+    color: #ffffff;
+    transition: all 0.3s linear;
+    z-index: 1;
+    border: 0;
+    overflow: hidden;
+    padding: 15px 30px 12px;
+    height: 60px;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    background-color: var(--yellow);
+}
+
+
+.send-btn:after {
+    position: absolute;
+    background: #efab0a;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+    transform: perspective(200px) scaleX(0.1) rotateX(90deg) translateZ(-10px);
+    transform-origin: bottom center;
+    transition: transform 0.4s linear, transform 0.4s linear;
+    z-index: -1;
+}
+
+.send-btn:hover:after {
+    transform: perspective(200px) scaleX(1.05) rotateX(0deg) translateZ(0);
+    transition: transform 0.4s linear, transform 0.4s linear;
+}
+
+/* ------------------------------------Contact Info tart------------------------------------ */
+
+.contact-info {
+    padding: 70px;
+    position: relative;
+    z-index: 1000;
+}
+
+.info-box{
+    position: relative;
+    display: flex;
+}
+
+.info-box i{
+    color: var(--yellow);
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+.info-box .icon-det{
+    margin: 5px 0 0 15px;
+}
+
+.icon-det h4{
+    font-weight: 600;
+    font-size: 19px;
+    margin: 0 0 5px;
+    font-family: var(--barlow);
+}
+
+.icon-det p{
+    color: #5a5959;
+    margin-bottom: 0;
+}
+
+.social-media .facbook{
+    background-color: #3b5999;
+    color: #fff;
+}
+
+.social-media .twitter{
+    background-color: #46c1f6;
+    color: #fff;
+}
+
+.social-media .instagram{
+    background-color: #e1306c;
+    color: #fff;
+}
+
+.social-media .Github{
+    background-color: #333333;
+    color: #fff;
+}
+
+.social-media .Youtube{
+    background-color: #de463b;
+    color: #fff;
+}
+
+.contact-map img{
+    z-index: -100;
+    height: 400px;
+    object-fit: cover;
+}
+
+.footer{
+    margin-top: 0;
+}
+
+
+/* ------------------------------------Contact Info end------------------------------------ */
